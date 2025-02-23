@@ -1,0 +1,132 @@
+@import "colors.css";
+
+* {
+  font-family: FantasqueSansMono Nerd Font;
+  font-size: 15px;
+  min-height: 0;
+}
+
+#waybar {
+  background: @black;
+  margin: 5px 5px;
+}
+
+#workspaces {
+  border-radius: 0rem;
+  margin: 5px;
+  background-color: @black;
+  margin-left: 1rem;
+}
+
+#workspaces button {
+  /* border-top: 2px solid transparent; */
+  /* To compensate for the top border and still have vertical centering */
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* border-radius: 0rem; */
+  /* border-top: 2px solid transparent; */
+  /* padding: 0.4rem; */
+  box-shadow: inset 0 -3px transparent;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+  background-color: transparent;
+  margin-right: 0.4rem;
+  color: @gray;
+}
+
+#workspaces button.active {
+  color: @white;
+}
+
+#workspaces button.urgent {
+  background-color: @blue;
+}
+
+#workspaces button:hover {
+  color: @white;
+}
+
+#custom-spotify,
+#clock,
+#tray,
+#backlight,
+#battery,
+#pulseaudio,
+#custom-lock,
+#network,
+#custom-power {
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
+}
+
+#clock {
+  color: @white;
+  /*background-color: transparent;*/
+  /* border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem; */
+}
+
+#custom-pkgs {
+  color: @white;
+}
+
+#battery {
+  color: @white;
+}
+
+#battery.charging {
+  color: @white;
+}
+
+#battery.warning:not(.charging) {
+  color: @white;
+}
+
+#backlight {
+  color: @white;
+}
+
+#backlight,
+#battery {
+  border-radius: 0;
+}
+
+#pulseaudio {
+  color: @white;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#pulseaudio.microphone {
+  color: @white;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 0.5rem;
+}
+
+#custom-spotify {
+  color: @white;
+  border-radius: 1rem;
+}
+
+#network {
+  color: @white;
+  border-radius: 1rem;
+  margin-left: 1rem;
+}
+
+#custom-lock {
+  border-radius: 1rem 0px 0px 1rem;
+  color: @white;
+}
+
+#custom-power {
+  margin-right: 1rem;
+  border-radius: 0px 1rem 1rem 0px;
+  color: @white;
+}
+
+#tray {
+  margin-right: 1rem;
+  border-radius: 1rem;
+}
